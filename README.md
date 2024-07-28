@@ -41,7 +41,7 @@ Build rootfs, initrd and kernel to boot x86-64 (can take a day):
  * python2 desktop.py
 
 After this you should get a hash for final package. Run:
- * tar xvf packages/<sha256>.tar.gz
+ * tar xvf packages/\<sha256\>.tar.gz
  * ./run\_image\_in\_qemu.sh
 
 You should now have x86-64 with Xorg, fluxbox (WM), xterm and dillo (browser)

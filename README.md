@@ -32,17 +32,17 @@ Limu needs about 50 GB of free disk space, python2 and a C compiler. Although
 not guaranteed, limu shouldn't write outside limu's root directory. Steps:
 
 Dependencies on Ubuntu:
-  sudo apt-get install build-essential libglib2-dev ...
+ * sudo apt-get install build-essential libglib2-dev ...
 
 Install lpack to ./bin/, it's limu's deterministic tar tool:
-  python2 install\_lpack.py
+ * python2 install\_lpack.py
 
 Build rootfs, initrd and kernel to boot x86-64 (can take a day):
-  python2 desktop.py
+ * python2 desktop.py
 
 After this you should get a hash for final package. Run:
-  tar xvf packages/<sha256>.tar.gz
-  ./run\_image\_in\_qemu.sh
+ * tar xvf packages/<sha256>.tar.gz
+ * ./run\_image\_in\_qemu.sh
 
 You should now have x86-64 with Xorg, fluxbox (WM), xterm and dillo (browser)
 running inside qemu that has been booted only by using Debian Rescue CD image
@@ -67,8 +67,8 @@ Determinism
 Determinstic binaries is the main goal of the project. This would solve a lot
 of trust issues with binaries, source-only dependency tracking and being
 able to reproduce compilation and software issues. It should be
-unacceptable that software stack relies on untrusted binaries. Here we
-trust only on Debian CD image (and host C compiler) and everything else is XXX auditable.
+unacceptable that software stack relies on untrusted binaries. Here we trust
+only on Debian CD image (and host C compiler) and everything else is auditable.
 
 The idea solve determinism is by running everything inside qemu CPU emulation.
 This is slow, but a necessity to not have the host influence on the

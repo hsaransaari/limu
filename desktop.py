@@ -1,7 +1,6 @@
 import sys
-import chains, chains.qemu, chains.debian, chains.i386, chains.x86_64, chains.x11
-
 sys.dont_write_bytecode = 1
+import chains, chains.qemu, chains.debian, chains.i386, chains.x86_64, chains.x11
 
 def main(**p):
     p.setdefault('host_tools', chains.qemu.getHostQemu())

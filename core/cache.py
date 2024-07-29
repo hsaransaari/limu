@@ -2,7 +2,7 @@ import shelve, hashlib, os, pickle, atexit, time, urlverify
 from contextlib import closing
 import core
 
-CACHE_FILE = 'limu.cache'
+CACHE_FILE = os.getcwd() + '/' + 'limu.cache'
 
 digest = hashlib.sha256
 
